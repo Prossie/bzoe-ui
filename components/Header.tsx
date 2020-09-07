@@ -44,7 +44,7 @@ export default function Header({ showMuggy,hideMenu,showMobileMenu,toggleShowMob
     const [duration]=React.useState(300)
     const size=React.useContext(ResponsiveContext )
     const classes =useStyles()
-    const [open, setOpen] = React.useState(true);
+    
 
   
     const desktopColor =fixed?'default':'transparent'
@@ -95,10 +95,11 @@ className={classes.large}
 icon={showMobileMenu?<Close size='medium' color='light-1' />:<GrometMenu size='medium' color='light-1' />}
 primary
 color='brand'
-dropProps={{margin:'2rem',width:'100%'}}
+width='100vw'
+dropProps={{plain:true}}
 dropAlign={{ top: 'bottom', right: 'right' }}
 dropContent={
-  <Box pad="medium" background='light-1'>
+  <Box fill pad="medium" background='light-1' margin={{top:'2rem'}}>
   
   <Menu vertical secondary floated fluid>
         <Menu.Item
