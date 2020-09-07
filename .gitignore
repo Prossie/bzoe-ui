@@ -30,3 +30,4 @@ yarn-error.log*
 .env.production.local
 packagge-lock.json
 yarn.lock
+*/dist/
