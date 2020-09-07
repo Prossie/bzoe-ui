@@ -21,9 +21,12 @@ const useStyles=makeStyles({
 })
 
 
+type LayoutProps = {
+  showShareThis:boolean
+}
 
-const Layout:FunctionComponent=({children,
-    showShareThis,
+const Layout:FunctionComponent<LayoutProps>=({
+    showShareThis,children
   })=>{
 
     const size=React.useContext(ResponsiveContext )
@@ -61,13 +64,14 @@ setShowMobileMenu(!showMobileMenu)
    
     window.location.replace('/');
   };
+  let gaInitialised =(window as any).GA_INITIALIZED
 
   React.useEffect(
     ()=>{
 
-      if (!window.GA_INITIALIZED) {
+      if (!gaInitialised) {
         initGA()
-        window.GA_INITIALIZED = true
+        gaInitialised= true
       }
       logPageView()
     
@@ -82,7 +86,7 @@ setShowMobileMenu(!showMobileMenu)
         <AppContainer className={classes.layout}>
       <Box>
       {showShareThis&& <ShareThis/> } 
-      <Header hideMenu={false} {...{showMobileMenu,toggleShowMobileMenu}}/>
+      <Header hideMenu={false} {...{showMuggy:true,showMobileMenu,toggleShowMobileMenu}}/>
        
       {children}
       </Box>

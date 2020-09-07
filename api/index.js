@@ -11,7 +11,7 @@ const { serverRuntimeConfig, publicRuntimeConfig } = getConfig()
 const app = feathers();
 
 const url =publicRuntimeConfig.BACKEND;
-// console.log(process.env.NODE_ENV);
+
 if (process.browser) {
   // Socket.io is exposed as the `io` global.
   const socket = io(url, {
@@ -48,7 +48,6 @@ import fetch from 'node-fetch';
 import auth0 from 'auth0-js'
 
 
-const uri=process.env.BACKEND
 
 const cache = new InMemoryCache();
 let link = new HttpLink({
@@ -81,9 +80,7 @@ const client =new ApolloClient({
 
 
 const webAuth = new auth0.WebAuth({
-  clientID: process.env.CLIENT_ID,
-  domain: process.env.DOMAIN,
-  redirectUri: process.env.REDIRECT_URI,
+  
   responseType: 'token id_token',
   scope: 'openid email profile'
 });

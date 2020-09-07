@@ -59,8 +59,8 @@ export default function MyApp(props: AppProps) {
   return (
     <Grommet theme={grommet}>
     <NextSeo {...SEO} />
-    <LocalBusinessJsonLd {...SCHEMA} />
-    <LogoJsonLd {...LOGO}/>
+  {/* <LocalBusinessJsonLd {...SCHEMA} />*/}
+    {/*<LogoJsonLd {...LOGO}/>*/}
     <ThemeProvider theme={theme}>
     {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
     <CssBaseline />
