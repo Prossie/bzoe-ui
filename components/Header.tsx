@@ -15,6 +15,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import PeopleIcon from '@material-ui/icons/People';
 import SendIcon from '@material-ui/icons/Send';
 import StarBorder from '@material-ui/icons/StarBorder';
+import {Button} from 'grommet'
 
 const useStyles = makeStyles((theme)=>({
 
@@ -36,7 +37,7 @@ type HeaderProps={
   hideMenu:boolean,
   showMuggy:boolean,
   showMobileMenu:boolean,
-  toggleShowMobileMenu:void
+  toggleShowMobileMenu:() => void
 }
 
 export default function Header({ showMuggy,hideMenu,showMobileMenu,toggleShowMobileMenu}:HeaderProps){
@@ -91,128 +92,130 @@ className={classes.large}
   {size!=='small'&&<AnimatedMenu duration={duration} fixed={fixed}/>}
   <GetInTouchWidget {...{showMuggy}}/>
   {size==='small'&&
-<DropButton
-icon={showMobileMenu?<Close size='medium' color='light-1' />:<GrometMenu size='medium' color='light-1' />}
-primary
-color='brand'
-width='100vw'
-dropProps={{plain:true}}
-dropAlign={{ top: 'bottom', right: 'right' }}
-dropContent={
-  <Box fill pad="medium" background='light-1' margin={{top:'2rem'}}>
-  
-  <Menu vertical secondary floated fluid>
-        <Menu.Item
-          name='company'
-          
-        >
-          
-          <List
-      component="nav"
-      aria-labelledby="nested-list-subheader"
-      subheader={
-        
-        <Heading color='brand' level='4'>Our Company</Heading>
-       
-      }
-      
-    >
-    <Link href="/about">
-        <Anchor style={{textDecoration:'none'}} color='dark-1'>
-      <ListItem button>
-        <ListItemIcon>
-          <SendIcon />
-        </ListItemIcon>
-        <ListItemText primary="About Us" />
-      </ListItem>
-</Anchor>
-</Link>
-
-<Link href="/customerstories">
-        <Anchor style={{textDecoration:'none'}} color='dark-1'>
-      <ListItem button>
-        <ListItemIcon>
-        <PeopleIcon />
-        </ListItemIcon>
-        <ListItemText primary="Customers" />
-      </ListItem>
-      </Anchor>
-</Link>
-<Link href="/faq">
-        <Anchor style={{textDecoration:'none'}} color='dark-1'>
-      <ListItem button>
-        <ListItemIcon>
-        <SendIcon />
-        </ListItemIcon>
-
-        <ListItemText primary="FAQ" />
-      </ListItem>
-      </Anchor>
-      </Link>
+  <Button onClick={toggleShowMobileMenu}
+  icon={<DropButton
+    icon={showMobileMenu?<Close size='medium' color='light-1' />:<GrometMenu size='medium' color='light-1' />}
+    primary
+    color='brand'
     
-     
-    </List>
-        </Menu.Item>
-
-        <Menu.Item
-          name='services'
+    dropProps={{plain:true}}
+    dropAlign={{ top: 'bottom', right: 'right' }}
+    dropContent={
+      <Box fill pad="medium" background='light-1' margin={{top:'2rem'}} width='100vw'>
+      
+      <Menu vertical secondary floated fluid>
+            <Menu.Item
+              name='company'
+              
+            >
+              
+              <List
+          component="nav"
+          aria-labelledby="nested-list-subheader"
+          subheader={
+            
+            <Heading color='brand' level='4'>Our Company</Heading>
+           
+          }
           
         >
-      
-        <List
-      component="nav"
-      aria-labelledby="nested-list-subheader"
-      subheader={
-        <Link href="/services">
-        <Anchor style={{textDecoration:'none'}} color='brand'>
-        <Heading level='4'>What we do (Our Services)</Heading>
-        </Anchor>
-        </Link>
-      }
-      
-    >
-
-    <Link href="/services/respitecare">
-        <Anchor style={{textDecoration:'none'}} color='dark-1'>
-      <ListItem button>
-        <ListItemIcon>
-          <StarBorder/>
-        </ListItemIcon>
-        <ListItemText primary="Respite Care" />
-      </ListItem>
-      </Anchor>
-        </Link>
-        <Link href="/services/seniorpersonalcare">
-        <Anchor style={{textDecoration:'none'}} color='dark-1'>
-      <ListItem button>
-        <ListItemIcon>
-        <StarBorder/>
-        </ListItemIcon>
-        <ListItemText primary="Senior Personal Care" />
-      </ListItem>
-      </Anchor>
-      </Link>
-
-      <Link href="/services/companioncare">
-        <Anchor style={{textDecoration:'none'}} color='dark-1'>
-      <ListItem button>
-        <ListItemIcon>
-        <StarBorder/>
-        </ListItemIcon>
-        <ListItemText primary="Companion Care" />
-      </ListItem>
-      </Anchor>
-      </Link>
-     
-    </List>
-        </Menu.Item>
-
-       
-      </Menu>
-  </Box>
-}
-onClick={toggleShowMobileMenu}
-/>
+        <Link href="/about">
+            <Anchor style={{textDecoration:'none'}} color='dark-1'>
+          <ListItem button>
+            <ListItemIcon>
+              <SendIcon />
+            </ListItemIcon>
+            <ListItemText primary="About Us" />
+          </ListItem>
+    </Anchor>
+    </Link>
+    
+    <Link href="/customerstories">
+            <Anchor style={{textDecoration:'none'}} color='dark-1'>
+          <ListItem button>
+            <ListItemIcon>
+            <PeopleIcon />
+            </ListItemIcon>
+            <ListItemText primary="Customers" />
+          </ListItem>
+          </Anchor>
+    </Link>
+    <Link href="/faq">
+            <Anchor style={{textDecoration:'none'}} color='dark-1'>
+          <ListItem button>
+            <ListItemIcon>
+            <SendIcon />
+            </ListItemIcon>
+    
+            <ListItemText primary="FAQ" />
+          </ListItem>
+          </Anchor>
+          </Link>
+        
+         
+        </List>
+            </Menu.Item>
+    
+            <Menu.Item
+              name='services'
+              
+            >
+          
+            <List
+          component="nav"
+          aria-labelledby="nested-list-subheader"
+          subheader={
+            <Link href="/services">
+            <Anchor style={{textDecoration:'none'}} color='brand'>
+            <Heading level='4'>What we do (Our Services)</Heading>
+            </Anchor>
+            </Link>
+          }
+          
+        >
+    
+        <Link href="/services/respitecare">
+            <Anchor style={{textDecoration:'none'}} color='dark-1'>
+          <ListItem button>
+            <ListItemIcon>
+              <StarBorder/>
+            </ListItemIcon>
+            <ListItemText primary="Respite Care" />
+          </ListItem>
+          </Anchor>
+            </Link>
+            <Link href="/services/seniorpersonalcare">
+            <Anchor style={{textDecoration:'none'}} color='dark-1'>
+          <ListItem button>
+            <ListItemIcon>
+            <StarBorder/>
+            </ListItemIcon>
+            <ListItemText primary="Senior Personal Care" />
+          </ListItem>
+          </Anchor>
+          </Link>
+    
+          <Link href="/services/companioncare">
+            <Anchor style={{textDecoration:'none'}} color='dark-1'>
+          <ListItem button>
+            <ListItemIcon>
+            <StarBorder/>
+            </ListItemIcon>
+            <ListItemText primary="Companion Care" />
+          </ListItem>
+          </Anchor>
+          </Link>
+         
+        </List>
+            </Menu.Item>
+    
+           
+          </Menu>
+      </Box>
+    }
+    
+    />}
+  />
 // <GrometMenu size='medium' color='brand' />
 
   }
