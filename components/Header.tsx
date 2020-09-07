@@ -47,7 +47,7 @@ export default function Header({ showMuggy,hideMenu,showMobileMenu,toggleShowMob
     const [open, setOpen] = React.useState(true);
 
   
-    const desktopColor =fixed?'background':'transparent'
+    const desktopColor =fixed?'default':'transparent'
 
     return(
        <Visibility
@@ -58,7 +58,7 @@ export default function Header({ showMuggy,hideMenu,showMobileMenu,toggleShowMob
    
 
     
-    <AppBar color={size!=='small' ? desktopColor:'background'}  elevation={0} style={{zIndex:1}} >
+    <AppBar color={size!=='small' ? desktopColor:'default'}  elevation={0} style={{zIndex:1}} >
        
   
     
