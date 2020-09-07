@@ -28,13 +28,14 @@ if (process.browser) {
   // Configure socket client
   app.configure(socketsClient);
   // incase we later have to do authentication
-
+  if (typeof window !== "undefined") {
   app.configure(
     feathers.authentication({
       storage: window.localStorage,
       // timeout: 20000
     })
   );
+  }
 }
 
 export default app;
