@@ -42,7 +42,7 @@ setShowMobileMenu(!showMobileMenu)
     },[showMobileMenu])
 
   React.useEffect(() => {
-    // every time you scroll
+    if (typeof window !== "undefined") {
     window.addEventListener(
       'scroll',
       throttle(() => {
@@ -58,13 +58,15 @@ setShowMobileMenu(!showMobileMenu)
         }
       }, 300)
     );
+  }
   }, []);
 
   const logout = () => {
-   
+    if (typeof window !== "undefined") {
     window.location.replace('/');
+  }
   };
-  let gaInitialised =(window as any).GA_INITIALIZED
+  let gaInitialised =typeof window !== "undefined"?(window as any).GA_INITIALIZED:null
 
   React.useEffect(
     ()=>{

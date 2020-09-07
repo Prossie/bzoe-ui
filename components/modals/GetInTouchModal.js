@@ -162,7 +162,9 @@ export default withRouter(({setShow,router,})=> {
       router.push('/')
       setShow(false)
       localStorage.setItem('token',null)
+      if (typeof window !== "undefined") {
       window.location.reload(false);
+      }
      }
 
   return (<Layer

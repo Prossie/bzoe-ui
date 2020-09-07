@@ -11,9 +11,11 @@ export const initGA = () => {
   ReactGA.initialize(trackingNo)
 }
 export const logPageView = () => {
+  if (typeof window !== "undefined") {
   console.log(`Logging pageview for ${window.location.pathname}`)
   ReactGA.set({ page: window.location.pathname })
   ReactGA.pageview(window.location.pathname)
+  }
 }
 export const logEvent = (category = '', action = '') => {
   if (category && action) {
