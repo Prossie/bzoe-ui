@@ -10,6 +10,10 @@ import{
   contact,
   ogImage
   } from 'config'
+
+  import getConfig from 'next/config'
+
+const { serverRuntimeConfig, publicRuntimeConfig } = getConfig()
   
   export const SEO= {
     title,
@@ -39,7 +43,7 @@ import{
       cardType: 'summary_large_image',
     },
     facebook: {
-      appId: process.env.FACEBOOK_APP_ID,
+      appId: publicRuntimeConfig.FACEBOOK_APP_ID,
       site: socialLinks.facebook,
     },
   };

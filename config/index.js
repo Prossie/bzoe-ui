@@ -1,8 +1,11 @@
 import PasswordValidator from 'password-validator'
+import getConfig from 'next/config'
+
+const { serverRuntimeConfig, publicRuntimeConfig } = getConfig()
 
  export const type='LocalBusiness'
 export const legalName='B\'Zoe Homecare Services'
-export const url =process.env.FRONTEND_URL;
+export const url =publicRuntimeConfig.FRONTEND_URL;
  export const logo =`${url}/imgs/xx.png`
 
 

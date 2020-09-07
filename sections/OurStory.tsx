@@ -1,11 +1,10 @@
 
 
-import { Box, Paragraph,Image,Heading,ResponsiveContext,Anchor} from "grommet"
+import { Box, Paragraph,Heading} from "grommet"
 import {Paper} from '@material-ui/core'
 import React from "react"
 import VideoModel from 'components/video/VideoModal'
-import ReactPlayer from "react-player";
-import {Grid,Icon,Button,} from 'semantic-ui-react'
+import {Grid,} from 'semantic-ui-react'
 
 export default ()=>{
 
@@ -46,7 +45,7 @@ export default ()=>{
 While working part time in one of the nursing homes around this community, Prossie Lockett, a former accountant and now founder of B'Zoe Home Care Giving Services 
 was touched by the quality of life senior citizens were conditioned to have at the climax of their days. When asked why she quit on her career to start giving care to senior citizens, Prossie said: 
        </Paragraph>
-       <Paragraph color='dark-1' textAlign='center' s  style={{fontStyle:"italic",}}>
+       <Paragraph color='dark-1' textAlign='center'   style={{fontStyle:"italic",}}>
        "I thought and still think it is unfair to work so hard all the days of your life only to end up in some unfamiliar institution in your later days and I think that together with my team, we can make a difference."
        </Paragraph>
        <Paragraph fill>
