@@ -18,7 +18,7 @@ import {MyAnchor} from 'components/navigation'
 import {socialLinks} from 'config'
 
 export default(
- // {showMuggy}
+  {showMuggy}
 )=>{
     const [show, setShow] = React.useState(false);
     const size = React.useContext(ResponsiveContext);
