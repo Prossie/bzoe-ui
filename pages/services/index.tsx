@@ -6,6 +6,7 @@ import { Paper, Typography, Button as MuiButton,Avatar,makeStyles } from "@mater
 import RespiteCompanion from "sections/RespiteCompanion"
 import Personal from "sections/Personal"
 import React from "react"
+import {Divider} from 'semantic-ui-react'
 import GetInTouchModal from 'components/modals/GetInTouchModal'
 
 const useStyles = makeStyles((theme)=>({
@@ -39,12 +40,12 @@ export default ()=>{
   margin='none'
   style={{height:'100%'}}
   >
- 
+  {size==='small' &&<Divider hidden/>}
   <Box 
   background={{color:'light-3',opacity:0.0}} 
   gap='large'  margin='none' align="center"  direction='row-responsive' alignSelf='center'>
   
- { size!=='small' &&<Box background='transparent' width={size!=='small'?'50vw':'100vw'} alignSelf='center' >
+ <Box background='transparent' width={size!=='small'?'50vw':'100vw'} alignSelf='center' >
     <Paper elevation={0} style={{background:'transparent'}}>
     <Box alignSelf='center' align='center' justify='center'>
     <Paper elevation={0} style={{background:'transparent'}}>
@@ -55,7 +56,7 @@ export default ()=>{
 
     <Box gap='small'>
     <Box>
-    <Heading level="2" color='brand'>
+    <Heading level="2" color='brand' textAlign={size==='small'?'center':'start'}>
   What we do.
      </Heading>
     
@@ -65,7 +66,7 @@ export default ()=>{
      Our wide range of customized services ensures your loved one receives the care they both want and need.
      </Paragraph>
     </Box>
-   <Box direction='row' gap='small' margin={{vertical:'small'}}>
+   <Box direction='row' gap='small' margin={{vertical:'small'}} align={size==='small'?'center':'start'} justify={size==='small'?'center':'start'}>
    <MuiButton color='secondary' variant="contained" size='large' onClick={()=>setShow(true)}>
    Get In Touch
    </MuiButton>
@@ -83,36 +84,18 @@ export default ()=>{
     </Box>
     </Paper>
     </Box>
-    }
-   <Box background='transparent' width='large' height='large'>
+    
+   {size!=='small' &&<Box background='transparent' width='large' height='large'>
    
-{/*<Image   fit="contain" src={require('public/imgs/hero.png?webp')} />*/}
+
 <Box fill align='center' justify='center'>
   
   <Heading level='1' color='light-1'  size='large' textAlign='center'>
          We serve each client - your loved one - like they are all we have.
            </Heading>
-     {size==='small' && <Box gap='small' align='center' justify='center'>
-     <Box>
-     <Heading level="2" color='brand' textAlign='center'>
-   What we do.
-      </Heading>
      
-      <Paragraph  color='black'>
-      Knowing your loved one is happy, safe and cared for is your priority … and ours too. 
-      B'Zoe Home Care Giving Services provides the peace of mind you need when making the decision to honor your family member’s wish to remain in their home. 
-      Our wide range of customized services ensures your loved one receives the care they both want and need.
-      </Paragraph>
-     </Box>
-    <Box direction='row' gap='small' margin={{vertical:'small'}}>
-    <MuiButton color='secondary' variant="contained" size='large' onClick={()=>setShow(true)}>
-    Get In Touch
-    </MuiButton>
-   
-    </Box>
-     </Box>}
   </Box>  
-    </Box>
+    </Box>}
   </Box>
   
   </Box>

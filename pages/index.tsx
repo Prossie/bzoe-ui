@@ -59,7 +59,7 @@ export default ()=>{
 
     <Box gap='small'>
     <Box>
-    <Heading level="2" color='brand'>
+    <Heading level="2" color='brand' textAlign={size==='small'?'center':'start'}>
     Passionate Home Care
      </Heading>
     
@@ -71,7 +71,7 @@ export default ()=>{
       If you are looking for quality in-home care, look no further than B'Zoe Home Care Agency.
     </Paragraph>
     </Box>
-   <Box direction='row' gap='small' margin={{vertical:'small'}}>
+   <Box direction='row' gap='small' margin={{vertical:'small'}} align={size==='small'?'center':'start'} justify={size==='small'?'center':'start'}>
    <MuiButton color='secondary' variant="contained" size='large' onClick={() => setShow(true)}>
    Get In Touch
    </MuiButton>

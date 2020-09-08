@@ -67,7 +67,7 @@ export default ()=>{
   {size==='small' &&<Divider hidden/>}
   <Box 
   background={{color:'white',opacity:0.0}} 
-  gap='large'  margin='none' align="center" pad='large' direction='row-responsive' alignSelf='center'>
+  gap='large'  margin='none' align="center" justify='center' pad='large' direction='row-responsive' alignSelf='center'>
   
   <Box background='transparent' width={size!=='small'?'50vw':'100vw'}  alignSelf='center' >
     <Paper elevation={0} style={{background:'transparent'}}>
@@ -80,7 +80,7 @@ export default ()=>{
 
     <Box gap='small'>
     <Box>
-    <Heading level="2" color='brand'>
+    <Heading level="2" color='brand' textAlign={size==='small'?'center':'start'}>
   Who we are.
      </Heading>
     
@@ -90,7 +90,7 @@ export default ()=>{
      It is our mandate to make sure that you are confident that even in your absence, your loved one is getting the care they need, when they need it in the exact way you would give it.
     </Paragraph>
     </Box>
-   <Box direction='row' gap='small' margin={{vertical:'small'}}>
+   <Box direction='row' gap='small' margin={{vertical:'small'}} align={size==='small'?'center':'start'} justify={size==='small'?'center':'start'}>
    <MuiButton color='secondary' variant="contained" size='large' onClick={() => setShow(true)}>
    Get In Touch
    </MuiButton>
