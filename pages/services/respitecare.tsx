@@ -36,14 +36,16 @@ export default ()=>{
   opacity:0.96,
     
   }} 
- // className='blurBackground'
+  pad='none'
+  margin='none'
+  style={{height:'100%'}}
   >
- 
+  {size==='small' &&<Divider hidden/>}
   <Box 
   background={{color:'light-3',opacity:0.0}} 
   gap='large'  margin='none' align="center"  direction='row-responsive' alignSelf='center'>
   
- { size!=='small' &&<Box background='transparent' width='50vw' alignSelf='center' >
+<Box background='transparent' width={size!=='small'?'50vw':'100vw'} alignSelf='center' >
     <Paper elevation={0} style={{background:'transparent'}}>
     <Box alignSelf='center' align='center' justify='center'>
     <Paper elevation={0} style={{background:'transparent'}}>
@@ -54,7 +56,7 @@ export default ()=>{
 
     <Box gap='small'>
     <Box>
-    <Heading level="2" color='brand'>
+    <Heading level="2" color='brand' textAlign={size==='small'?'center':'start'}>
   Our Respite Program.
      </Heading>
     
@@ -65,7 +67,7 @@ export default ()=>{
     loved one so that they can always feel like you are around even when you break off to take your intervals of rest or relief.
      </Paragraph>
     </Box>
-   <Box direction='row' gap='small' margin={{vertical:'small'}}>
+   <Box direction='row' gap='small' margin={{vertical:'small'}} align={size==='small'?'center':'start'} justify={size==='small'?'center':'start'}>
    <MuiButton color='secondary' variant="contained" size='large' onClick={()=>setShow(true)}>
    Get In Touch
    </MuiButton>
@@ -82,9 +84,9 @@ export default ()=>{
     </Paper>
     </Box>
     </Paper>
-    </Box>}
+    </Box>
     
-   <Box background='transparent' width='large' height='large'>
+  {size!=='small' &&<Box background='transparent' width='large' height='large'>
    
 {/*<Image   fit="contain" src={require('public/imgs/hero.png?webp')} />*/}
 <Box fill align='center' justify='center'>
@@ -92,28 +94,9 @@ export default ()=>{
   <Heading level='1' color='light-1'  size='large' textAlign='center'>
          You can trust us to stand in for you regardless.
            </Heading>
-     {size==='small' &&<Box gap='small' align='center' justify='center'>
-     <Box>
-     <Heading level="2" color='brand' textAlign='center'>
-   Our Respite Program.
-      </Heading>
      
-      <Paragraph  color='black'>
-     Knowing how important your health and peace of mind as the primary care giver for your loved one is to your effectiveness
-      in taking care of your loved one, we go an extra mile to ensure that you get the break you need as we stand in for you.
-     Our respite care program is designed in such a way that we select the perfect match not only to replace you but to also meet the special needs of your 
-     loved one so that they can always feel like you are around even when you break off to take your intervals of rest or relief.
-      </Paragraph>
-     </Box>
-    <Box direction='row' gap='small' margin={{vertical:'small'}}>
-    <MuiButton color='secondary' variant="contained" size='large' onClick={()=>setShow(true)}>
-    Get In Touch
-    </MuiButton>
-   
-    </Box>
-     </Box>}
   </Box>  
-    </Box>
+    </Box>}
   </Box>
   
   </Box>

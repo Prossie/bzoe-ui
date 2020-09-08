@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme)=>({
   fontWeight:'bold',
     },
     large: {
-      width: theme.spacing(10),
-      height: theme.spacing(10),
+      width: theme.spacing(8),
+      height: theme.spacing(8),
     },
     nested: {
       paddingLeft: theme.spacing(4),
@@ -78,11 +78,11 @@ src={require('public/imgs/xx.png?webp')}
 className={classes.large} 
 />
  </Box>
-       <Box align='center'>
+     { size!=='small'&& <Box align='center'>
        <Text  margin='none' size='xxlarge' color='brand'><span style={{fontFamily:'Pinyon Script',fontSize:'60px'}}>B</span> 'Zoe</Text>
        <Heading margin='none' level={size!=='small'?'3':'4'} color='brand'>Home Care</Heading>
      
-       </Box>
+       </Box>}
       
       
 </Box>

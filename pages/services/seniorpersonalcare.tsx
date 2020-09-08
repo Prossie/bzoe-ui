@@ -36,14 +36,16 @@ export default ()=>{
   opacity:0.96,
     
   }} 
- // className='blurBackground'
+  pad='none'
+  margin='none'
+  style={{height:'100%'}}
   >
- 
+  {size==='small' &&<Divider hidden/>}
   <Box 
   background={{color:'light-3',opacity:0.0}} 
   gap='large'  margin='none' align="center"  direction='row-responsive' alignSelf='center'>
   
- {size!=='small' &&<Box background='transparent' width='50vw' alignSelf='center' >
+<Box background='transparent' width={size!=='small'?'50vw':'100vw'} alignSelf='center' >
     <Paper elevation={0} style={{background:'transparent'}}>
     <Box alignSelf='center' align='center' justify='center'>
     <Paper elevation={0} style={{background:'transparent'}}>
@@ -54,7 +56,7 @@ export default ()=>{
 
     <Box gap='small'>
     <Box>
-    <Heading level="2" color='brand'>
+    <Heading level="2" color='brand' textAlign={size==='small'?'center':'start'}>
   Senior Personal Care
      </Heading>
     
@@ -67,7 +69,7 @@ export default ()=>{
     comfortable and able to help themselves as much as possible in the home they truly love.
      </Paragraph>
     </Box>
-   <Box direction='row' gap='small' margin={{vertical:'small'}}>
+   <Box direction='row' gap='small' margin={{vertical:'small'}} align={size==='small'?'center':'start'} justify={size==='small'?'center':'start'}>
    <MuiButton color='secondary' variant="contained" size='large' onClick={()=>setShow(true)}>
    Get In Touch
    </MuiButton>
@@ -85,8 +87,8 @@ export default ()=>{
     </Box>
     </Paper>
     </Box>
-    }
-   <Box background='transparent' width='large' height='large'>
+    
+  {size!=='small' &&<Box background='transparent' width='large' height='large'>
    
 {/*<Image   fit="contain" src={require('public/imgs/hero.png?webp')} />*/}
 <Box fill align='center' justify='center' pad='medium'>
@@ -94,30 +96,9 @@ export default ()=>{
   <Heading level='1' color='light-1'  size='large' textAlign='center'>
         We are that extra hand your loved one needs.
            </Heading>
-     {size ==='small' && <Box gap='small' align='center' justify='center' pad='medium'>
-     <Box>
-     <Heading level="2" color='brand' textAlign='center'>
-   Senior Personal Care
-      </Heading>
      
-      <Paragraph  color='black'>
-     As age kicks in, our strength and ability to do the essential personal tasks fades. 
-     Unfortunately the responsibilities of our closest friends and family that would help us out at this time 
-     have also increased so much that they can no  longer attend to us as we would want them to. 
-     B'Zoe understands this and is fully committed to making sure your loved one gets that exceptional personal assistance 
-     they need and still make them feel independent, 
-     comfortable and able to help themselves as much as possible in the home they truly love.
-      </Paragraph>
-     </Box>
-    <Box direction='row' gap='small' margin={{vertical:'small'}}>
-    <MuiButton color='secondary' variant="contained" size='large' onClick={()=>setShow(true)}>
-    Get In Touch
-    </MuiButton>
-   
-    </Box>
-     </Box>}
   </Box>  
-    </Box>
+    </Box>}
   </Box>
   
   </Box>

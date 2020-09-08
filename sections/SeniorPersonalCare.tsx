@@ -53,7 +53,7 @@ export default() =>{
   
   
  <Box  gap='small' margin={{vertical:'small'}}>
- <Heading level='3' color='brand'>
+ <Heading level='3' color='brand' textAlign={size==='small'?'center':'start'}>
  Enjoy better Senior Personal Care.
  </Heading>
  <Paragraph fill  margin={{vertical:'small'}}>

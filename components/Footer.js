@@ -72,15 +72,15 @@ B'Zoe, Inc. -12400 SE 38TH ST. #50462
 </Box>
       </Grid.Column>
       <Grid.Column>
-<Box style={{paddingRight:'5rem !important'}} align='start'>
-<Heading alignSelf='start' level='1'>Remember: </Heading>
+<Box style={{paddingRight:'5rem !important'}} align='center'>
+<Heading  level='1'>Remember </Heading>
 
-<Paragraph size='large' fill>
+<Paragraph size='large' fill textAlign='center'>
 At B'Zoe Home Care, our primary goal is to help provide a high quality of life for our clients 
 and their families by delivering customized, dependable and affordable care. Our team of highly-qualified
  caregivers and staff all live in Snohomish and King Counties, WA area and we are invested in this community.  
 </Paragraph>
-<Heading level='3' color='light-3' alignSelf='start' >At your service 24/7 </Heading>
+<Heading level='3' color='light-3' >At your service 24/7 </Heading>
 </Box>
       </Grid.Column>
      </Grid>
