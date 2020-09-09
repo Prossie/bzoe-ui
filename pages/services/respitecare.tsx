@@ -8,6 +8,8 @@ import Personal from "sections/Personal"
 import React from "react"
 import GetInTouchModal from 'components/modals/GetInTouchModal'
 import {Grid,Image,Button,Container,Divider} from 'semantic-ui-react'
+import { NextSeo } from 'next-seo';
+import {url,type,legalName} from 'config'
 
 const useStyles = makeStyles((theme)=>({
 
@@ -25,6 +27,25 @@ export default ()=>{
   const [show, setShow] = React.useState(false);
 
     return <Layout showShareThis>
+
+    <NextSeo {...{
+      title: "Find The Best Respite Home Care around Snohomish or King County.",
+      description:`You can trust us to stand in for you regardless.`,
+      openGraph: {
+          type,
+          locale: 'en_IE',
+          url:`${url}/about`,
+          site_name: legalName,
+          images: [
+            {
+              url:`${url}/imgs/ogimage-respitecare.png`,
+              width: 900,
+              height: 638,
+              alt: 'Respite Care B\'Zoe Home Care Giving Services'
+            }
+          ],
+        },
+  }} />
  
   <Box gap="xlarge" background={{
     //color:'brand',

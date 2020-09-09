@@ -22,7 +22,7 @@ export const contact={
     phone:'+1 (888) 545 4331'
 }
 
-export const ogImage=`${url}/imgs/ogimage-min.png`
+export const ogImage=`${url}/imgs/ogimage.png`
 
 export const title='In-home Care, Respite Care, Elderly Care & Companion Care'
 

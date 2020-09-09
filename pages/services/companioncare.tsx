@@ -1,13 +1,14 @@
 
 import Layout from "components/Layout"
 import Link from "next/link"
-import { Box, Paragraph,Heading,ResponsiveContext,Anchor,Text} from "grommet"
-import { Paper, Typography, Button as MuiButton,Avatar,makeStyles } from "@material-ui/core"
-import RespiteCompanion from "sections/RespiteCompanion"
+import { Box, Paragraph,Heading,ResponsiveContext,Anchor} from "grommet"
+import { Paper, Button as MuiButton,Avatar,makeStyles } from "@material-ui/core"
 import WhyUsCard from "components/WhyUsCard"
 import React from "react"
 import GetInTouchModal from 'components/modals/GetInTouchModal'
-import {Grid,Image,Button,Container,Divider} from 'semantic-ui-react'
+import {Grid,Container,Divider} from 'semantic-ui-react'
+import { NextSeo } from 'next-seo';
+import {url,type,legalName} from 'config'
 
 const useStyles = makeStyles((theme)=>({
 
@@ -24,7 +25,24 @@ export default ()=>{
   const [show, setShow] = React.useState(false);
   const classes =useStyles()
     return <Layout showShareThis>
- 
+    <NextSeo {...{
+      title: "Companion Care around Snohomish or King County.",
+      description:`Find your loved one the companion they’ve always missed.`,
+      openGraph: {
+          type,
+          locale: 'en_IE',
+          url:`${url}/about`,
+          site_name: legalName,
+          images: [
+            {
+              url:`${url}/imgs/ogimage-companioncare.png`,
+              width: 900,
+              height: 638,
+              alt: 'Personal Care B\'Zoe Home Care Giving Services'
+            }
+          ],
+        },
+  }} />
   <Box gap="xlarge" background={{
     //color:'brand',
     dark:true,
