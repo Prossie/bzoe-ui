@@ -1,13 +1,13 @@
 
 import Layout from "components/Layout"
-import HomePageHero from "sections/HomePageHero"
-import { Box, Paragraph,Heading,ResponsiveContext,Anchor,Text} from "grommet"
-import { Paper, Typography, Button as MuiButton,Avatar,makeStyles } from "@material-ui/core"
-import RespiteCompanion from "sections/RespiteCompanion"
+import { Box, Paragraph,Heading,ResponsiveContext,Anchor} from "grommet"
+import { Paper, Button as MuiButton,makeStyles } from "@material-ui/core"
 import WhyUsCard from "components/WhyUsCard"
 import React from "react"
 import GetInTouchModal from 'components/modals/GetInTouchModal'
-import {Grid,Image,Button,Container,Divider} from 'semantic-ui-react'
+import {Grid,Container,Divider} from 'semantic-ui-react'
+import { NextSeo } from 'next-seo';
+import {url,type,legalName} from 'config'
 
 const useStyles = makeStyles((theme)=>({
 
@@ -21,11 +21,27 @@ const useStyles = makeStyles((theme)=>({
 
 export default ()=>{
   const size= React.useContext(ResponsiveContext)
-  const classes =useStyles()
   const [show, setShow] = React.useState(false);
 
     return <Layout showShareThis>
- 
+    <NextSeo {...{
+      title: "Stop your search for Senior Personal Care around Snohomish or King County.",
+      description:`You can trust us to stand in for you regardless.`,
+      openGraph: {
+          type,
+          locale: 'en_IE',
+          url:`${url}/about`,
+          site_name: legalName,
+          images: [
+            {
+              url:`${url}/imgs/ogimage-personalcare.png`,
+              width: 900,
+              height: 638,
+              alt: 'Personal Care B\'Zoe Home Care Giving Services'
+            }
+          ],
+        },
+  }} />
   <Box gap="xlarge" background={{
     //color:'brand',
     dark:true,

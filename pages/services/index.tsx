@@ -1,13 +1,15 @@
 
 import Layout from "components/Layout"
 import Link from "next/link"
-import { Box, Paragraph,Heading,ResponsiveContext,Anchor,Text} from "grommet"
-import { Paper, Typography, Button as MuiButton,Avatar,makeStyles } from "@material-ui/core"
+import { Box, Paragraph,Heading,ResponsiveContext,Anchor} from "grommet"
+import { Paper, Button as MuiButton,Avatar,makeStyles } from "@material-ui/core"
 import RespiteCompanion from "sections/RespiteCompanion"
 import Personal from "sections/Personal"
 import React from "react"
 import {Divider} from 'semantic-ui-react'
 import GetInTouchModal from 'components/modals/GetInTouchModal'
+import { NextSeo } from 'next-seo';
+import {url,type,legalName} from 'config'
 
 const useStyles = makeStyles((theme)=>({
 
@@ -25,7 +27,24 @@ export default ()=>{
   const classes =useStyles()
 
     return <Layout showShareThis>
- 
+    <NextSeo {...{
+      title: "Looking for non medical in home care around Snohomish or King County?",
+      description:`We serve each client - your loved one - like they are all we have.`,
+      openGraph: {
+          type,
+          locale: 'en_IE',
+          url:`${url}/about`,
+          site_name: legalName,
+          images: [
+            {
+              url:`${url}/imgs/ogimage-services.png`,
+              width: 900,
+              height: 638,
+              alt: 'Services  B\'Zoe Home Care Giving Services'
+            }
+          ],
+        },
+  }} />
   <Box gap="xlarge" background={{
     //color:'brand',
     dark:true,

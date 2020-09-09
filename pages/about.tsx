@@ -2,7 +2,7 @@
 import Layout from "components/Layout"
 import {url,type,legalName} from 'config'
 import { Box, Paragraph,Heading,ResponsiveContext,Anchor,Text} from "grommet"
-import { Paper, Typography, Button as MuiButton,Avatar,makeStyles } from "@material-ui/core"
+import { Paper, Button as MuiButton,Avatar,makeStyles } from "@material-ui/core"
 import OurProcess from "sections/OurProcess"
 import { NextSeo } from 'next-seo';
 import OurStory from "sections/OurStory"
@@ -10,9 +10,8 @@ import React from "react"
 import {
   LinkedinOption,
   FacebookOption,
-  Location,
 } from 'grommet-icons'
-import {Grid,Image,Button,Container,Divider} from 'semantic-ui-react'
+import {Image,Button,Container,Divider} from 'semantic-ui-react'
 import GetInTouchModal from 'components/modals/GetInTouchModal'
 
 
@@ -33,8 +32,8 @@ export default ()=>{
 
     return <Layout showShareThis>
     <NextSeo {...{
-      title: "Learn about us as a Non medical home care agency",
-      description:`More than 90% of seniors want to age in their own home with dignity but getting the right type of care can seem daunting. As B'Zoe Home care we are committed to delivering the best possible in-home care to senior citizens with in the Snohomish and King County community. It is our mandate to make sure that you are confident that even in your absence, your loved one is getting the care they need, when they need it in the exact way you would give it.`,
+      title: "Learn about us as a Non medical home care agency.",
+      description:`For the best non medical in home care services around King County (Bellevue,Kirkland, Mercer Island and Issaquah), call +1 (888) 545 4331`,
       openGraph: {
           type,
           locale: 'en_IE',
@@ -42,7 +41,7 @@ export default ()=>{
           site_name: legalName,
           images: [
             {
-              url:`${url}/imgs/ogimage-abt.png`,
+              url:`${url}/imgs/ogimage-about.png`,
               width: 900,
               height: 638,
               alt: 'About B\'Zoe Home Care Giving Services'

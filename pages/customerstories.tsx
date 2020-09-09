@@ -1,12 +1,13 @@
 
 import Layout from "components/Layout"
-import HomePageHero from "sections/HomePageHero"
-import { Box, Paragraph,Heading,ResponsiveContext,Anchor,Text} from "grommet"
-import { Paper, Typography, Button as MuiButton,Avatar,makeStyles } from "@material-ui/core"
+import { Box, Paragraph,Heading,ResponsiveContext,Anchor} from "grommet"
+import { Paper, Button as MuiButton,Avatar,makeStyles } from "@material-ui/core"
 import GetInTouchModal from 'components/modals/GetInTouchModal'
 import React from "react"
 import Link from 'next/link'
-import {Grid,Image,Button,Container,Divider} from 'semantic-ui-react'
+import {Grid,Container} from 'semantic-ui-react'
+import { NextSeo } from 'next-seo';
+import {url,type,legalName} from 'config'
 
 const useStyles = makeStyles((theme)=>({
 
@@ -23,7 +24,24 @@ export default ()=>{
   const [show, setShow] = React.useState(false);
   const classes =useStyles()
     return <Layout showShareThis>
- 
+    <NextSeo {...{
+      title: "What in home care customers around Snohomish or King County.",
+      description:`Our customer's happiness is our satisfaction..`,
+      openGraph: {
+          type,
+          locale: 'en_IE',
+          url:`${url}/about`,
+          site_name: legalName,
+          images: [
+            {
+              url:`${url}/imgs/ogimage-customer.png`,
+              width: 900,
+              height: 638,
+              alt: 'Customer Stories and Reviews B\'Zoe Home Care Giving Services'
+            }
+          ],
+        },
+  }} />
   <Box gap="xlarge" background={{
     //color:'brand',
     dark:true,

@@ -1,11 +1,12 @@
 
 import Layout from "components/Layout"
-import { Box, Paragraph,Heading,ResponsiveContext,Anchor} from "grommet"
-import { Paper, Button as MuiButton,Avatar,makeStyles,  } from "@material-ui/core"
+import { Box} from "grommet"
+import { Paper, makeStyles,  } from "@material-ui/core"
 import WhyUsCard from "components/WhyUsCard"
 import React from "react"
-import {Grid,Container,Divider} from 'semantic-ui-react'
-import GetInTouchModal from 'components/modals/GetInTouchModal'
+import {Container,Divider} from 'semantic-ui-react'
+import { NextSeo } from 'next-seo';
+import {url,type,legalName} from 'config'
 
 const useStyles = makeStyles((theme)=>({
 
@@ -18,10 +19,26 @@ const useStyles = makeStyles((theme)=>({
 }))
 
 export default ()=>{
-  const classes =useStyles()
   
     return <Layout showShareThis>
- 
+    <NextSeo {...{
+      title: "Learn more about non medical in home care around Snohomish or King County.",
+      description:`We have been in service for more than 10 years.`,
+      openGraph: {
+          type,
+          locale: 'en_IE',
+          url:`${url}/about`,
+          site_name: legalName,
+          images: [
+            {
+              url:`${url}/imgs/ogimage-faq.png`,
+              width: 900,
+              height: 638,
+              alt: 'FAQ B\'Zoe Home Care Giving Services'
+            }
+          ],
+        },
+  }} />
     <Paper elevation={0} style={{
         backgroundImage: `url(${require('public/imgs/820.png?webp')})`,
         backgroundPosition:"center",
