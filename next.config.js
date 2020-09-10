@@ -9,6 +9,7 @@ if (typeof require !== 'undefined') {
 }
 
 module.exports=withOptimizedImages({
+ /*
   async redirects() {
     return [
       {
@@ -18,7 +19,7 @@ module.exports=withOptimizedImages({
       },
     ]
   },
-
+*/
    /* config for next-optimized-images */
    imageTrace: {
     color: "#40e0c3"
