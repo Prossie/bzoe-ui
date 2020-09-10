@@ -71,7 +71,7 @@ export default() =>{
  { size!=='small' &&<Box align="center" justify='center' >
   
   <Box width='large' height='large' align="center" justify='center' >
-  <Image src={require('public/imgs/personalcarebkgnd.png?webp')} fit="cover"/>
+  <Image src={require('public/imgs/personalcarebkgnd.png?webp')} fit="cover" alt='Senior Personal Care Image'/>
   </Box>
   
   </Box>
