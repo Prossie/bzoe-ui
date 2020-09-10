@@ -9,7 +9,15 @@ if (typeof require !== 'undefined') {
 }
 
 module.exports=withOptimizedImages({
-
+  async redirects() {
+    return [
+      {
+        source: 'http://*',
+        destination: 'https://*', // Matched parameters can be used in the destination
+        permanent: true,
+      },
+    ]
+  },
 
    /* config for next-optimized-images */
    imageTrace: {
