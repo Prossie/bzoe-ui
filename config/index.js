@@ -36,9 +36,9 @@ export const address={
 }
 
 export const socialLinks={
-    facebook:'https://www.facebook.com/homecarebellevue/',
+    facebook:'https://www.facebook.com/homecarebellevue',
     twitter:'https://twitter.com/bzoehomecare',
-    instagram:'https://www.instagram.com/bzoehomcare/',
+    instagram:'https://www.instagram.com/bzoehomcare',
     linkedin:'https://www.linkedin.com/company/b-zoe-homecare-giving-services',
     care:'https://www.care.com/b/l/b-zoe-home-caregiving-services/bellevue-wa'
 }
