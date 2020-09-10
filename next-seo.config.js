@@ -74,12 +74,12 @@ const { serverRuntimeConfig, publicRuntimeConfig } = getConfig()
     images:[
       logo,
       ogImage,
-      `${url}/imgs/heropic-min.jpg`,
-      `${url}/imgs/spc2-min.png`,
-      `${url}/imgs/spc4-min.png`,
-      `${url}/imgs/spec5-min.jpg`,
-      `${url}/imgs/spec7-min.jpg`,
-      `${url}/imgs/spec6-min.jpg`,
+      `${url}/imgs/ogimage-about.png`,
+      `${url}/imgs/ogimage-customers.png`,
+      `${url}/imgs/ogimage-services.png`,
+      `${url}/imgs/ogimage-seniorpersonalcare.png`,
+      `${url}/imgs/ogimage-companioncare.png`,
+      `${url}/imgs/ogimage-respitecare.png`,
     ],
     openingHours:[
       {
