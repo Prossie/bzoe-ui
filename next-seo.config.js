@@ -39,8 +39,6 @@ const { serverRuntimeConfig, publicRuntimeConfig } = getConfig()
     
     twitter: {
       handle: '@bzoehomecare',
-      title,
-      description,
       site: socialLinks.twitter,
       cardType: 'summary_large_image',
     },
