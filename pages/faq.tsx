@@ -33,7 +33,7 @@ export default ()=>{
             {
               url:`${url}/imgs/ogimage-faq.png`,
               width: 900,
-              height: 638,
+              height: 524,
               alt: 'FAQ B\'Zoe Home Care Giving Services'
             }
           ],
