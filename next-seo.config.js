@@ -39,8 +39,8 @@ const { serverRuntimeConfig, publicRuntimeConfig } = getConfig()
     
     twitter: {
       handle: '@bzoehomecare',
-      title: 'Reliable Senior In Home Care',
-      description:'We have been passionately giving in home care services to seniors around Snohomish and King County for the last 10 years.',
+      title,
+      description,
       site: socialLinks.twitter,
       cardType: 'summary_large_image',
     },

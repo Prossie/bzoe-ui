@@ -139,7 +139,7 @@ and their families by delivering customized, dependable and affordable care. Our
              
               <Menu.Menu position="right">
               <Link href='/'>
-                <Anchor style={{textDecoration:'none'}}>
+                <Anchor style={{textDecoration:'none',fontSize:'1.4rem'}}>
                 <Menu.Item
                   header
                   name="home"
@@ -147,7 +147,7 @@ and their families by delivering customized, dependable and affordable care. Our
                   onClick={this.handleItemClick}
                 >
                 
-                    <span style={{color: 'white',fontSize:'1.4rem'}}>
+                    <span style={{color: 'white'}}>
                     Copyright {moment ().format ('YYYY')}{" "}
                       &copy;B'Zoe, Inc.
                     </span>
