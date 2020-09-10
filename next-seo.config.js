@@ -32,13 +32,15 @@ const { serverRuntimeConfig, publicRuntimeConfig } = getConfig()
           url: ogImage,
           width: 900,
           height: 522,
-          alt: 'Quality Homecare Services For the Elderly'
+          alt: 'Quality Home Care Services For the Elderly Around Snohomish and King County.'
         }
       ],
     },
     
     twitter: {
       handle: '@bzoehomecare',
+      title: 'Reliable Senior In Home Care',
+      description:'We have been passionately giving in home care services to seniors around Snohomish and King County for the last 10 years.',
       site: socialLinks.twitter,
       cardType: 'summary_large_image',
     },

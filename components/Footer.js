@@ -86,10 +86,10 @@ and their families by delivering customized, dependable and affordable care. Our
      </Grid>
       </Box>
         </Paper>
-          <Menu secondary inverted fluid stackable size="large" style={{background: 'transparent'}}>
+          <Menu secondary inverted fluid stackable style={{background: 'transparent'}}>
             <Container>
             <Link href='/about'>
-          <Anchor style={{textDecoration:'none'}}>
+          <Anchor   style={{textDecoration:'none',fontSize:'1.4rem'}}>
             <Menu.Item
             header
             name="home"
@@ -105,7 +105,7 @@ and their families by delivering customized, dependable and affordable care. Our
           </Anchor>
           </Link>
           <Link href='/services'>
-          <Anchor style={{textDecoration:'none'}}>
+          <Anchor style={{textDecoration:'none',fontSize:'1.4rem'}}>
           <Menu.Item
                   header
                   name="home"
@@ -121,7 +121,7 @@ and their families by delivering customized, dependable and affordable care. Our
                 </Anchor>
               </Link>
                 <Link href='/faq'>
-                <Anchor style={{textDecoration:'none'}}>
+                <Anchor style={{textDecoration:'none',fontSize:'1.4rem'}}>
                 <Menu.Item
                   header
                   name="home"
@@ -147,7 +147,7 @@ and their families by delivering customized, dependable and affordable care. Our
                   onClick={this.handleItemClick}
                 >
                 
-                    <span style={{color: 'white'}}>
+                    <span style={{color: 'white',fontSize:'1.4rem'}}>
                     Copyright {moment ().format ('YYYY')}{" "}
                       &copy;B'Zoe, Inc.
                     </span>
