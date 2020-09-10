@@ -37,7 +37,7 @@ export default ()=>{
             {
               url:`${url}/imgs/ogimage-companioncare.png`,
               width: 900,
-              height: 638,
+              height: 522,
               alt: 'Personal Care B\'Zoe Home Care Giving Services'
             }
           ],
@@ -79,7 +79,7 @@ export default ()=>{
      </Heading>
     
      <Paragraph  color='black'>
-     In our senior years, our memories are our greatest toy. 
+     In our senior years, our memories are our greatest toy.
      If not well managed, they can be very damaging, however, if well guided, they can be as gold. At B’Zoe companionship is our greatest strength. 
      Our clients always feel our caregivers have always been a part of their life as we not only bring them good memories of the past but 
      also make sure to bring back the fun of their old lives 

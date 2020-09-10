@@ -31,7 +31,7 @@ const { serverRuntimeConfig, publicRuntimeConfig } = getConfig()
         {
           url: ogImage,
           width: 900,
-          height: 638,
+          height: 522,
           alt: 'Quality Homecare Services For the Elderly'
         }
       ],
