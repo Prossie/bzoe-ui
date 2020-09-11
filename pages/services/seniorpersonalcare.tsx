@@ -61,7 +61,7 @@ export default ()=>{
   background={{color:'light-3',opacity:0.0}} 
   gap='large'  margin='none' align="center"  direction='row-responsive' alignSelf='center'>
   
-<Box background='transparent' width={size!=='small'?'50vw':'100vw'} alignSelf='center' >
+<Box background='transparent' width={size!=='small'?'70vw':'100vw'}  alignSelf='center' >
     <Paper elevation={0} style={{background:'transparent'}}>
     <Box alignSelf='center' align='center' justify='center'>
     <Paper elevation={0} style={{background:'transparent'}}>
@@ -109,7 +109,7 @@ export default ()=>{
 {/*<Image   fit="contain" src={require('public/imgs/hero.png?webp')} />*/}
 <Box fill align='center' justify='center' pad='medium'>
   
-  <Heading level='1' color='light-1'  size='large' textAlign='center'>
+  <Heading level='2' color='light-1'  size='large' textAlign='center'>
         We are that extra hand your loved one needs.
            </Heading>
      

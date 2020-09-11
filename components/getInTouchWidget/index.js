@@ -50,9 +50,7 @@ export default(
         <Box flex>
 
 <Button 
-margin={{top:'small'}}
-
-size='big'
+size='large'
 className='themedButton' 
 type='submit'
 onClick={
