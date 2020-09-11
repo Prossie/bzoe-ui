@@ -18,6 +18,7 @@ const { serverRuntimeConfig, publicRuntimeConfig } = getConfig()
   export const SEO= {
     title,
   titleTemplate: `%s | B'Zoe `,
+  canonical:url,
   description,
     itemScope: true,
     itemType: 'http://schema.org/Article',
@@ -26,6 +27,8 @@ const { serverRuntimeConfig, publicRuntimeConfig } = getConfig()
       type,
       locale: 'en_IE',
       url,
+      title,
+      description,
       site_name: legalName,
       images: [
         {
