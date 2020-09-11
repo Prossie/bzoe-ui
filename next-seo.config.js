@@ -39,12 +39,15 @@ const { serverRuntimeConfig, publicRuntimeConfig } = getConfig()
         }
       ],
     },
-    
-   
     facebook: {
       appId: publicRuntimeConfig.FACEBOOK_APP_ID,
       site: socialLinks.facebook,
     },
+    twitter:{
+      handle: '@bzoehomecare',
+      site:socialLinks.twitter,
+      cardType: 'app',
+    }
   };
   
   export const SCHEMA={

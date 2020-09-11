@@ -13,7 +13,7 @@ import 'nprogress/nprogress.css';
 import Router from 'next/router'
 import { makeStyles } from '@material-ui/core/styles';
 import {SEO,SCHEMA,LOGO }from 'next-seo.config'
-import { NextSeo,LocalBusinessJsonLd,LogoJsonLd } from 'next-seo'
+import { DefaultSeo,LocalBusinessJsonLd,LogoJsonLd } from 'next-seo'
 
 NProgress.configure({ showSpinner: false,trickleSpeed:3000, });
 
@@ -60,7 +60,7 @@ export default function MyApp(props: AppProps) {
 
   return (
     <Grommet theme={grommet}>
-    <NextSeo {...SEO} />
+    <DefaultSeo {...SEO} />
  <LocalBusinessJsonLd {...SCHEMA} />
   <LogoJsonLd {...LOGO}/>
     <ThemeProvider theme={theme}>
