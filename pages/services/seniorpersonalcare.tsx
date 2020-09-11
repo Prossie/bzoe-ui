@@ -8,6 +8,7 @@ import GetInTouchModal from 'components/modals/GetInTouchModal'
 import {Grid,Container,Divider} from 'semantic-ui-react'
 import { NextSeo } from 'next-seo';
 import {url,type,legalName} from 'config'
+import Link from 'next/link'
 
 const useStyles = makeStyles((theme)=>({
 
@@ -246,9 +247,11 @@ const SectionTwo = ()=>{
       
       <Grid.Column>
       <Box fill align='center' justify='center'>
-      <Anchor color='dark-1' href='/' style={{textDecoration:'none'}}>
+      <Link href='/services/respitecare'>
+      <Anchor color='dark-1'  style={{textDecoration:'none'}}>
       <Heading  level='2'>Respite Care</Heading>
       </Anchor>
+      </Link>
       <Paragraph color='dark-2' margin={{bottom:"small"}}  textAlign='center'>
      For any reason you would want to take a break from your responsibilities as the primary care giver of a loved one B'Zoe Home Care Giving Services will enable you.
     You do not have to worry about how your loved one's experience will be when you are away. We have a wide scope of well trained caregivers to attend to any 
@@ -259,9 +262,11 @@ const SectionTwo = ()=>{
       </Grid.Column>
       <Grid.Column style={{margin:'0px'}}>
 <Box fill align='center' justify='center'>
-<Anchor color='brand' href='/' style={{textDecoration:'none'}}>
+<Link  href='/services/companioncare' >
+<Anchor color='brand' style={{textDecoration:'none'}}>
       <Heading  level='2'>Companion Care</Heading>
       </Anchor>
+</Link>
 <Paragraph color='dark-3' margin={{bottom:"small"}}  textAlign='center'>
 Our companion care line of senior home health care services offers daily companionship and assistance with daily living activities. 
 If your loved one is living alone and your visits are limited, social interaction becomes very important to their happiness and helps prevent feelings of isolation and depression. 

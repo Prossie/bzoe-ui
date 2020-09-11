@@ -1,13 +1,11 @@
 
 import Layout from "components/Layout"
-import HomePageHero from "sections/HomePageHero"
-import { Box, Paragraph,Heading,ResponsiveContext,Anchor,Text} from "grommet"
-import { Paper, Typography, Button as MuiButton,Avatar,makeStyles } from "@material-ui/core"
-import RespiteCompanion from "sections/RespiteCompanion"
-import Personal from "sections/Personal"
+import { Box, Paragraph,Heading,ResponsiveContext,Anchor} from "grommet"
+import { Paper, Button as MuiButton,makeStyles } from "@material-ui/core"
+import Link from "next/link"
 import React from "react"
 import GetInTouchModal from 'components/modals/GetInTouchModal'
-import {Grid,Image,Button,Container,Divider} from 'semantic-ui-react'
+import {Grid,Divider} from 'semantic-ui-react'
 import { NextSeo } from 'next-seo';
 import {url,type,legalName} from 'config'
 
@@ -23,7 +21,6 @@ const useStyles = makeStyles((theme)=>({
 
 export default ()=>{
   const size= React.useContext(ResponsiveContext)
-  const classes =useStyles()
   const [show, setShow] = React.useState(false);
 
     return <Layout showShareThis>
@@ -249,9 +246,11 @@ const SectionTwo = ()=>{
       
       <Grid.Column>
       <Box fill align='center' justify='center'>
-      <Anchor color='dark-1' href='/' style={{textDecoration:'none'}}>
-      <Heading  level='2'>Senior Personal Care</Heading>
-      </Anchor>
+     <Link href='/services/seniorpersonalcare'>
+     <Anchor color='dark-1'  style={{textDecoration:'none'}}>
+     <Heading  level='2'>Senior Personal Care</Heading>
+     </Anchor>
+     </Link>
       <Paragraph color='dark-2' margin={{bottom:"small"}}  textAlign='center'>
       We make aging in place possible for for your loved one in the comfort of their own home.
       We believe that it is better to spend their old age in an environment where they have a strong 
@@ -266,9 +265,11 @@ const SectionTwo = ()=>{
       </Grid.Column>
       <Grid.Column style={{margin:'0px'}}>
 <Box fill align='center' justify='center'>
-<Anchor color='brand' href='/' style={{textDecoration:'none'}}>
+<Link href='/services/companioncare'>
+<Anchor color='brand'  style={{textDecoration:'none'}}>
       <Heading  level='2'>Companion Care</Heading>
       </Anchor>
+</Link>
 <Paragraph color='dark-3' margin={{bottom:"small"}}  textAlign='center'>
 Our companion care line of senior home health care services offers daily companionship and assistance with daily living activities. 
 If your loved one is living alone and your visits are limited, social interaction becomes very important to their happiness and helps prevent feelings of isolation and depression. 
