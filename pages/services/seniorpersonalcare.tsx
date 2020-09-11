@@ -28,10 +28,11 @@ export default ()=>{
     <NextSeo {...{
       title: "Stop your search for Senior Personal Care around Snohomish or King County.",
       description:`You can trust us to stand in for you regardless.`,
+      canonical:`${url}/services/seniorpersonalcare`,
       openGraph: {
           type,
           locale: 'en_IE',
-          url:`${url}/about`,
+          url:`${url}/services/seniorpersonalcare`,
           site_name: legalName,
           images: [
             {
