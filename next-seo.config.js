@@ -40,11 +40,7 @@ const { serverRuntimeConfig, publicRuntimeConfig } = getConfig()
       ],
     },
     
-    twitter: {
-      handle: '@bzoehomecare',
-      site: socialLinks.twitter,
-      cardType: 'summary_large_image',
-    },
+   
     facebook: {
       appId: publicRuntimeConfig.FACEBOOK_APP_ID,
       site: socialLinks.facebook,
