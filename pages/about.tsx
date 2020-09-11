@@ -68,7 +68,7 @@ export default ()=>{
   background={{color:'white',opacity:0.0}} 
   gap='large'  margin='none' align="center" justify='center' pad='large' direction='row-responsive' alignSelf='center'>
   
-  <Box background='transparent' width={size!=='small'?'50vw':'100vw'}  alignSelf='center' >
+  <Box background='transparent' width={size!=='small'?'70vw':'100vw'}   alignSelf='center' >
     <Paper elevation={0} style={{background:'transparent'}}>
     <Box alignSelf='center' align='center' justify='center'>
     <Paper elevation={0} style={{background:'transparent'}}>
@@ -83,7 +83,7 @@ export default ()=>{
   Who we are.
      </Heading>
     
-     <Paragraph  color='black' fill>
+     <Paragraph  color='black' >
      More than 90% of seniors want to age in their own home with dignity but getting the right type of care can seem daunting.
      As B'Zoe Home care we are committed to delivering the best possible in-home care to senior citizens with in the Snohomish and King County community.
      It is our mandate to make sure that you are confident that even in your absence, your loved one is getting the care they need, when they need it in the exact way you would give it.

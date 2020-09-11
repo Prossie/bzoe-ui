@@ -61,7 +61,7 @@ export default ()=>{
   background={{color:'light-3',opacity:0.0}} 
   gap='large'  margin='none' align="center"  direction='row-responsive' alignSelf='center'>
   
- {size!=='small'&& <Box background='transparent' width='50vw' alignSelf='center' >
+ {size!=='small'&& <Box background='transparent' width={size!=='small'?'70vw':'100vw'}  alignSelf='center' >
     <Paper elevation={0} style={{background:'transparent'}}>
     <Box alignSelf='center' align='center' justify='center'>
     <Paper elevation={0} style={{background:'transparent'}}>
@@ -89,7 +89,7 @@ export default ()=>{
          style={{textDecoration:'none',fontStyle:"italic",fontWeight:'bold'}}
          color='dark-1' href='/' 
          >
-         <Paragraph textAlign='center' size='medium'>
+         <Paragraph textAlign='center' size='small'>
         "I strongly recommend B'Zoe Home Care Services. They have taken care of my 98 year old mother for the last year following a fall and later stroke, requiring 24 hour care. We tried other services, but have found B'Zoe home care to provide superior professional care we have depended upon during these stressful and difficult times. "
         <p style={{fontSize:'1rem'}}> ~ Dr. Wayne Tilson</p>
         <p style={{fontSize:'1rem'}}>(MD Emergency Medicine Spokane Valley, WA)</p> 
@@ -123,7 +123,7 @@ export default ()=>{
 {/*<Image   fit="contain" src={require('public/imgs/hero.png?webp')} />*/}
 <Box fill align='center' justify='center'>
   
-  <Heading level='1' color='light-1'  size='large' textAlign='center'>
+  <Heading level='2' color='light-1'  size='large' textAlign='center'>
   Our customer's happiness is our satisfaction.
            </Heading>
            {size==='small' &&<Box direction='row' gap='small' margin={{vertical:'small'}}>

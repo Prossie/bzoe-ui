@@ -10,9 +10,9 @@ const ProductsDropdownEl = styled.div`
 `
 
 const Logo = styled.div`
-  width: 38px;
-  height: 38px;
-  margin-right: 16px;
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
   border-radius: 100%;
   opacity: 0.6;
   background-color: ${({ color }) => `var(--${color})`};
@@ -64,7 +64,7 @@ const ProductsDropdown = () => {
           <Logo color="blue" />
         </div>
         <div>
-          <Heading color="blue">Respite Care</Heading>
+          <Heading level='3' color="blue">Respite Care</Heading>
           <Paragraph  size='small'   color='dark-3'>
           Find out how we can relieve you of the potential stress from relentless care giving. 
           We have a well packaged program to make sure that both your loved one and their caregivers are in a good state of mind and are healthy.
@@ -82,7 +82,7 @@ const ProductsDropdown = () => {
               <Logo color="green" />
             </div>
             <div>
-              <Heading color="green">Senior Personal Care</Heading>
+              <Heading color="green" level='3'>Senior Personal Care</Heading>
               <Paragraph  size='small'  color='dark-3'>
 At some point in our loved one's life, whether as a result of an injury, medical condition, or simply part of the aging process it 
 becomes difficult to take care of oneself.
@@ -100,7 +100,7 @@ With great confidentiality and respect for your loved one’s dignity, our care 
             <Logo color="teal" />
           </div>
           <div>
-            <Heading color="teal">Companion Care</Heading>
+            <Heading color="teal" level='3'>Companion Care</Heading>
             <Paragraph  size='small'  color='dark-3'>
             If your loved one is living alone and your visits are limited, social interaction becomes very 
             important to their happiness and helps prevent feelings of isolation and depression. Whether they need a little fun or 
@@ -116,7 +116,7 @@ With great confidentiality and respect for your loved one’s dignity, our care 
       <DropdownSection>
         
        
-          <Heading noMarginBottom>
+          <Heading noMarginBottom level='3'>
           <Link href='/services'>
           <a>
               <Icon /> Dig Deeper into our Services

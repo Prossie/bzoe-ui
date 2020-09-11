@@ -43,12 +43,12 @@ export default ()=>{
   style={{height:'100%'}}
   
   >
- <Divider section hidden/>
+{size==='small'&& <Divider section hidden/>}
   <Box 
   background={{color:'light-1',opacity:size!=='small'?0.0:0.8}} 
   gap='large'  margin='none' align="center" pad='large' direction='row-responsive' alignSelf='center'>
   
-  <Box background='transparent' width={size!=='small'?'50vw':'100vw'} alignSelf='center' >
+  <Box background='transparent' width={size!=='small'?'70vw':'100vw'} alignSelf='center' >
     <Paper elevation={0} style={{background:'transparent'}}>
     <Box alignSelf='center' align='center' justify='center'>
     <Paper elevation={0} style={{background:'transparent'}}>
@@ -63,7 +63,7 @@ export default ()=>{
     Passionate Home Care
      </Heading>
     
-     <Paragraph  color='black' fill>
+     <Paragraph  color='black'>
      Home care services for the elderly is our priority.
      Our in-home care services are well packaged to make your loved one feel at home. 
     With our compassionate caregivers, we take care of their personal hygiene,

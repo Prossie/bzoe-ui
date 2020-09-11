@@ -47,6 +47,7 @@
     "next-optimized-images": "^2.6.1",
     "next-routes": "^1.4.2",
     "next-seo": "^4.4.0",
+    "nextjs-redirect": "^5.0.0",
     "nextjs-sitemap-generator": "^1.0.0",
     "node-machine-id": "^1.1.12",
     "node-sass": "^4.14.1",
