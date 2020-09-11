@@ -241,9 +241,11 @@ const SectionTwo = ()=>{
       
       <Grid.Column>
       <Box fill align='center' justify='center'>
-      <Anchor color='dark-1' href='/' style={{textDecoration:'none'}}>
-      <Heading  level='2'>Respite Care</Heading>
-      </Anchor>
+     <Link  href='/services/respitecare'>
+     <Anchor color='dark-1' style={{textDecoration:'none'}}>
+     <Heading  level='2'>Respite Care</Heading>
+     </Anchor>
+     </Link>
       <Paragraph color='dark-2' margin={{bottom:"small"}}  textAlign='center'>
      For any reason you would want to take a break from your responsibilities as the primary care giver of a loved one B'Zoe Home Care Giving Services will enable you.
     You do not have to worry about how your loved one's experience will be when you are away. We have a wide scope of well trained caregivers to attend to any 
@@ -254,9 +256,11 @@ const SectionTwo = ()=>{
       </Grid.Column>
       <Grid.Column style={{margin:'0px'}}>
 <Box fill align='center' justify='center'>
-<Anchor color='brand' href='/' style={{textDecoration:'none'}}>
+<Link href='/services/seniorpersonalcare' >
+<Anchor color='brand' style={{textDecoration:'none'}}>
       <Heading  level='2'>Senior Personal Care</Heading>
       </Anchor>
+</Link>
 <Paragraph color='dark-3' margin={{bottom:"small"}}  textAlign='center'>
 When we grow, the personal things that we used to do with a lot of ease by our own selves become a challenge. 
 For such tasks we need help from a person we can trust and feel safe around that we know will treat us with great care, patience, confidentiality and dignity.
