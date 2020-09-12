@@ -27,7 +27,7 @@ export default ()=>{
     <NextSeo {...{
       title: "What in home care customers around Snohomish or King County.",
       description:`Our customer's happiness is our satisfaction..`,
-      canonical:`${url}/customerstories`,
+    //  canonical:`${url}/customerstories`,
       openGraph: {
           type,
           locale: 'en_IE',

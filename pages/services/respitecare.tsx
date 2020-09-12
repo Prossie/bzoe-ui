@@ -28,7 +28,7 @@ export default ()=>{
     <NextSeo {...{
       title: "Find The Best Respite Home Care around Snohomish or King County.",
       description:`You can trust us to stand in for you regardless.`,
-      canonical:`${url}/services/respitecare`,
+    //  canonical:`${url}/services/respitecare`,
       openGraph: {
           type,
           locale: 'en_IE',
