@@ -28,7 +28,7 @@ export default ()=>{
     <NextSeo {...{
       title: "Companion Care around Snohomish or King County.",
       description:`Find your loved one the companion they’ve always missed.`,
-      canonical:`${url}/services/companioncare`,
+      // canonical:`${url}/services/companioncare`,
       openGraph: {
           type,
           locale: 'en_IE',

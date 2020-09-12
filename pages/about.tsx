@@ -34,7 +34,7 @@ export default ()=>{
     <NextSeo {...{
       title: "Learn about us as a Non medical home care agency.",
       description:`For the best non medical in home care services around King County (Bellevue,Kirkland, Mercer Island and Issaquah), call +1 (888) 545 4331`,
-      canonical:`${url}/about`,
+    //  canonical:`${url}/about`,
       openGraph: {
           type,
           locale: 'en_IE',

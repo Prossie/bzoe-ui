@@ -24,7 +24,7 @@ export default ()=>{
     <NextSeo {...{
       title: "Learn more about non medical in home care around Snohomish or King County.",
       description:`We have been in service for more than 10 years.`,
-      canonical:`${url}/faq`,
+     // canonical:`${url}/faq`,
       openGraph: {
           type,
           locale: 'en_IE',

@@ -18,7 +18,7 @@ const { serverRuntimeConfig, publicRuntimeConfig } = getConfig()
   export const SEO= {
     title,
   titleTemplate: `%s | B'Zoe `,
-  canonical:url,
+  canonical:'https://www.canonical.ie/',
   description,
     itemScope: true,
     itemType: 'http://schema.org/Article',
